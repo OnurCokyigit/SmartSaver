@@ -53,7 +53,7 @@ node server.js
 
 ---
 
-## 🇬🇧 SmartSaver – Mobile Finance Manager 💸📊
+## 🇺🇸 SmartSaver – Mobile Finance Manager 💸📊
 
 SmartSaver is an advanced **personal finance management app** developed for Android. It enables users to **track balance, transfer money, and manage stock investments**. This full-stack project was developed as part of **CENG427 course**.
 
