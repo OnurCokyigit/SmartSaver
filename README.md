@@ -1,55 +1,107 @@
-🇹🇷 SmartSaver – Mobil Finans Yönetimi Uygulaması 💸📊
-SmartSaver, Android platformu için geliştirilmiş, kapsamlı bir kişisel finans yönetim uygulamasıdır. Uygulama, kullanıcıların hem günlük para transfer işlemlerini hem de hisse senedi yatırımlarını kolaylıkla takip edebilmelerine olanak sağlar. Bu proje, CENG427 dersi kapsamında geliştirilmiştir ve hem frontend (Android) hem de backend (Node.js + SQLite) bileşenlerini içeren tam teşekküllü bir yapıya sahiptir.
+## 🇹🇷 SmartSaver – Mobil Finans Yönetimi Uygulaması 💸📊
 
-🔍 Uygulama Ne İşe Yarar?
-Kullanıcılar uygulama üzerinden kayıt olabilir, giriş yapabilir ve bakiye yönetimi gerçekleştirebilir.
+SmartSaver, Android platformu için geliştirilmiş, **kapsamlı bir kişisel finans yönetim uygulamasıdır**. Kullanıcıların hem **para transferlerini** hem de **hisse yatırımlarını** yönetmesini sağlar. Proje, **CENG427** dersi kapsamında gerçekleştirilmiştir.
 
-Kullanıcılar, favori kişilerine para transferi yapabilir veya onlardan para alabilir.
+---
 
-Hisse senetleri API üzerinden çekilir ve kullanıcılar bu hisseleri satın alabilir veya satabilir.
+### 🔍 Ne Sunar?
 
-Kullanıcıların işlemleri detaylı olarak kaydedilir ve geçmiş transfer/hisse hareketleri görüntülenebilir.
+* Kayıt / Giriş ekranı
+* Kullanıcı bakiyesi takibi
+* Para gönderme/alma işlemleri
+* Hisse senedi alım/satım ekranı (grafikli)
+* Geçmiş transferlerin listelenmesi
+* Portföy ve istatistik ekranları
 
-Yatırımlar ve getiriler grafiklerle analiz edilebilir.
+---
 
-🖼️ Uygulama Arayüzü ve Kullanım
-1. 🟦 Splash Screen
-Uygulama açıldığında özel bir splash screen sizi karşılar.
+### 🗃️ Nasıl Kullanılır?
 
-2. 👤 Giriş / Kayıt Ekranı
-Kullanıcılar e-posta, şifre ve isim bilgileriyle kayıt olabilir.
+1. **Splash Screen:** Uygulama açılırken karşılar.
+2. **Login/Register:** Email, şifre ve isim ile giriş yapılır.
+3. **Dashboard:** Bakiyeyi ve geçiş ekranlarını görürsünüz.
+4. **Transfer:** Email girerek para gönderilir.
+5. **Stocks:** Gerçek zamanlı fiyatlar ve grafiklerle hisse al/sat.
+6. **MyStats:** Yatırım özeti, grafikler ve transfer geçmişi.
 
-Kayıtlı kullanıcılar sisteme giriş yapar.
+---
 
-3. 🏠 Dashboard
-Kullanıcının adı ve mevcut bakiyesi gösterilir.
+### ⚙️ Kullanılan Teknolojiler
 
-Transfer, yatırım planı, hisse listesi ve istatistik ekranlarına geçiş yapılabilir.
+| Katman      | Teknoloji         | Açıklama                     |
+| ----------- | ----------------- | ---------------------------- |
+| 📱 Mobil    | Java (Android)    | Uygulama gel.ü frontend      |
+| 🔁 API      | Volley / JSON     | Veri iletişimi               |
+| 📈 Grafik   | MPAndroidChart    | Hisse fiyat grafikleri       |
+| 🧠 Yerel DB | SQLite            | Yerel veri saklama           |
+| 🌐 Sunucu   | Node.js + Express | API backend                  |
+| 📃 Database | SQLite3           | Kullanıcı, transfer, portföy |
 
-4. 💸 Para Transferi
-E-posta ile alıcı belirlenir, tutar girilir.
+---
 
-Transfer başarılı olursa hem alıcı hem gönderici bakiyeleri güncellenir.
+### 🚀 Kurulum Talimatı
 
-📥 Gelen transferler "Received" olarak gösterilir.
+```bash
+cd Ceng427Database/
+npm init -y
+npm install express sqlite3 cors
+node server.js
+```
 
-5. 📈 Hisse Detay Ekranı
-Seçilen hissenin 1 hafta / 1 ay / 1 yıl fiyat hareketleri çizgi grafiği ile gösterilir.
+* Android Studio'da uygulamayı çalıştır
+* `http://10.0.2.2:3000` adresine bağlanarak API ile haberleşir
 
-Kullanıcı sahip olduğu miktarı görebilir, yeni hisse alabilir ya da elindekileri satabilir.
+---
 
-Tüm veriler AlphaVantage API üzerinden canlı çekilir.
+## 🇬🇧 SmartSaver – Mobile Finance Manager 💸📊
 
-6. 📊 İstatistik Ekranı (MyStats)
-Kullanıcının toplam yatırımı, kâr/zarar durumu ve sahip olduğu hisselerin getirisi gösterilir.
+SmartSaver is an advanced **personal finance management app** developed for Android. It enables users to **track balance, transfer money, and manage stock investments**. This full-stack project was developed as part of **CENG427 course**.
 
-Geçmiş para transferleri bir liste halinde küçük bir pencere (AlertDialog) ile görüntülenebilir.
+---
 
-⚙️ Kullanılan Teknolojiler
-Katman	Teknoloji	Açıklama
-📱 Mobil	Java (Android SDK)	Tüm frontend mimarisi
-🔁 API	Volley / JSON	API veri çekimi ve POST işlemleri
-📈 Grafik	MPAndroidChart	Hisse grafik çizimleri
-🧠 Yerel DB	SQLite / Room	Hisse geçmişi ve offline veri
-🌐 Backend	Node.js + Express.js	Sunucu tarafı işlemler
-🗃️ Database	SQLite3	Veritabanı işlemleri (kullanıcı, transfer, portföy)
+### 🔍 Features
+
+* Login / Register
+* Real-time balance tracking
+* Send/receive funds
+* Buy/sell stocks with live charts
+* View investment performance
+* Transaction history with names and timestamps
+
+---
+
+### 🗃️ Usage Flow
+
+1. **Splash Screen** on launch
+2. **Login/Register** with email, password
+3. **Dashboard** shows current balance
+4. **Transfer**: enter email + amount
+5. **Stock Details**: see charts, trade
+6. **Stats Page**: track profit/loss & history
+
+---
+
+### ⚙️ Tech Stack
+
+| Layer       | Technology        | Description                 |
+| ----------- | ----------------- | --------------------------- |
+| 📱 Mobile   | Java (Android)    | Frontend app logic          |
+| 🔁 API      | Volley / JSON     | Server communication        |
+| 📈 Charts   | MPAndroidChart    | Price chart visualization   |
+| 🧠 Local DB | SQLite            | Offline stock data          |
+| 🌐 Backend  | Node.js + Express | API server                  |
+| 📃 Database | SQLite3           | Users, transfers, portfolio |
+
+---
+
+### 🚀 Setup Instructions
+
+```bash
+cd Ceng427Database/
+npm init -y
+npm install express sqlite3 cors
+node server.js
+```
+
+* Run the Android app in Android Studio
+* Connects to `http://10.0.2.2:3000` for backend APIs
